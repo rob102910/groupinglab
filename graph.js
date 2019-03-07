@@ -3,9 +3,9 @@ var datawhatever = d3.json("data.json");
 
 datawhatever.then(function(data)
 {
-  drawGraph(data,400,300,".one");
-  drawGraph(data,500,400,".two");
-  drawGraph(data,600,500,".three");
+  drawGraph(data,500,300,".one");
+  drawGraph(data,600,400,".two");
+  drawGraph(data,700,500,".three");
 },
 function(err)
 {
@@ -26,9 +26,9 @@ var svg = d3.select(c)
              
 var margins =
 { 
-  top:10,
+  top:50,
   bottom:50,
-  left:10,
+  left:100,
   right:100
 }
 
@@ -94,5 +94,11 @@ var xAxis = d3.axisBottom(xScale);
   svg.append("g").classed("xAxis",true)
      .call(xAxis)
      .attr("transform", "translate(" +margins.left+"," + (margins.top+height+10)+")")
+  
+ var yAxis = d3.axisLeft(yScale);
+  
+  svg.append("g").classed("yAxis",true)
+     .call(yAxis)
+     .attr("transform", "translate("+margins.left-15 + "," + margins.top+")")
   
 }

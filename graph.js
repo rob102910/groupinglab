@@ -65,7 +65,7 @@ students.selectAll("circle")
         .append("circle")
         .attr("cx",function(d,i) {return xScale(i)+10})
         .attr("cy",function(d) {return yScale(d)})
-        .attr("r",8);
+        .attr("r",5);
                                                  
 //the legend
 var legend = svg.append("g")

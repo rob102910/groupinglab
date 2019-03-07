@@ -85,7 +85,7 @@ legendLines.append("rect")
 legendLines.append("text")
            .attr("x",20)
            .attr("y",10)
-           .text(function(d) {return d.name})
+           .text(function(d) {return d.name});
           
 var xAxis = d3.axisBottom(xScale);
   

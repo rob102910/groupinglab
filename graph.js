@@ -42,7 +42,7 @@ var xScale = d3.scaleLinear()
                 .range([0,width]);
 var yScale = d3.scaleLinear()
                 .domain([0,100])
-                .range([0,height]);
+                .range([height,0]);
   
 var colors = d3.scaleOrdinal(d3.schemeSet3);
 

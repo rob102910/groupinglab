@@ -43,7 +43,7 @@ var yScale = d3.scaleLinear()
                 .domain([0,100])
                 .range([height,0]);
   
-var colors = d3.scaleOrdinal(d3.schemeGnBu);
+var colors = d3.scaleOrdinal(d3.interpolateInferno);
                
 //plot land
 var plotLand = svg.append("g")

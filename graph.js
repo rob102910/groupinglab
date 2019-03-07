@@ -43,7 +43,7 @@ var yScale = d3.scaleLinear()
                 .domain([0,100])
                 .range([height,0]);
   
-var colors = d3.scaleOrdinal(d3.schemeGnBu[k]);
+var colors = d3.scaleOrdinal(d3.schemeGnBu);
                
 //plot land
 var plotLand = svg.append("g")

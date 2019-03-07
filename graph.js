@@ -23,7 +23,7 @@ var drawGraph = function(data,w,h,c)
 var svg = d3.select(c)
              .attr("width",screen.width)
              .attr("height",screen.height)
-             .attr("fill",#AAC0AA)
+             .attr("fill","#AACOAA");
              
 var margins =
 { 

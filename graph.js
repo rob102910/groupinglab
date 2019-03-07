@@ -91,4 +91,4 @@ var xAxis = d3.axisBottom(xScale);
   
   svg.append("g").classed("xAxis",true)
      .call(xAxis)
-     .attr("transform", "translate(" +margins.left+"," + (margins.top+height+10)+")")
+     .attr("transform", "translate(" +margins.left+"," + (margins.top+height+10)+")");

@@ -3,19 +3,21 @@ var datawhatever = d3.json("data.json");
 
 datawhatever.then(function(data)
 {
-  drawGraph(data);
+  drawGraph(data,200,300);
+  drawGraph(data,300,400);
+  drawGraph(data,400,500);
 },
 function(err)
 {
   console.log(err)
 })
 
-var drawGraph = function(data)
+var drawGraph = function(data,w,h)
 {
   var screen = 
   {
-    width:500,
-    height:400
+    width:w,
+    height:h
   };
   
 var svg = d3.select("svg")

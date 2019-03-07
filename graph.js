@@ -52,7 +52,7 @@ var students = plotLand.selectAll("g")
                         .data(data)
                         .enter()
                         .append("g")
-                        .atrr("fill",function(d){return colors(d.name);})
+                        .attr("fill",function(d){return colors(d.name);})
                                                 
                        
 students.selectAll("circle")

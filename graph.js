@@ -1,4 +1,4 @@
-var datawhatever = d3.json(".json");
+var datawhatever = d3.json("data.json");
 
 datawhatever.then(function(data)
 {
@@ -11,11 +11,11 @@ function(err)
 
 var drawGraph = function(data)
 {
-  var screen =
+  var screen = 
   {
     width:500,
     height:400
-  {,
+  };
   
 var svg = d3.select("svg")
              .attr("width",screen.width)
@@ -24,7 +24,7 @@ var svg = d3.select("svg")
 var margins =
 { 
   top:10,
-  bottom:10,
+  bottom:50,
   left:10,
   right:100
 }
@@ -34,25 +34,25 @@ var height = screen.height- margins.top -margins.bottom;
 
 //scales usually go here
 var xScale = d3.scaleLinear()
-                .domain([0,numberofgradesetc.])
+                .domain([0,20])
                 .range([0,width]);
 var yScale = d3.scaleLinear()
                 .domain([0,100])
-                .range([0,-height]);
+                .range([height,0]);
+  
 var colors = d3.scaleOrdinal(d3.schemeAccent);
                
-
 //plot land
 var plotLand = svg.append("g")
-                  .classed("plot",true);
-                  .attr("transform","translate("+margins.left+","+margins.top+ ")")
+                  .classed("plot",true)
+                  .attr("transform","translate("+margins.left+","+margins.top+ ")");
                   
 var students = plotLand.selectAll("g")
                         .data(data)
                         .enter()
                         .append("g")
                         .atrr("fill",function(d){return colors(d.name);})
-                                                 //might want to look at
+                                                
                        
 students.selectAll("circle")
         .data(function(d) {return d.grades})
@@ -60,11 +60,11 @@ students.selectAll("circle")
         .append("circle")
         .attr("cx",function(d,i) {return xScale(i)})
         .attr("cy",function(d) {return yScale(d)})
-        .attr("r",10);
+        .attr("r",8);
                                                  
 //the legend
 var legend = svg.append("g")
-                .classed("legend",true);
+                .classed("legend",true)
                 .attr("transform","translate(" + (width+margins.left)+"," + margins.top+")" );
                                                  
 var legendLines = legend.selectAll("g")

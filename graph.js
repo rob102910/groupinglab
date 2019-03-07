@@ -70,7 +70,7 @@ students.selectAll("circle")
 //the legend
 var legend = svg.append("g")
                 .classed("legend",true)
-                .attr("transform","translate(" + (width+margins.left)+"," + margins.top+")" );
+                .attr("transform","translate(" + (width+margins.left+20)+"," + margins.top+")" );
                                                  
 var legendLines = legend.selectAll("g")
                         .data(data)

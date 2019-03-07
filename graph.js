@@ -43,7 +43,8 @@ var yScale = d3.scaleLinear()
                 .domain([0,100])
                 .range([0,height]);
   
-var colors = d3.scaleOrdinal(d3.["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#8c564b","#e377c2","#7f7f7f","#bcbd22","#17becf"]);
+var colors = d3.scaleOrdinal.range(["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#8c564b","#e377c2","#7f7f7f","#bcbd22","#17becf"]);
+
                
 //plot land
 var plotLand = svg.append("g")

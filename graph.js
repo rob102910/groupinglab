@@ -3,9 +3,9 @@ var datawhatever = d3.json("data.json");
 
 datawhatever.then(function(data)
 {
-  drawGraph(data,200,300,".one");
-  drawGraph(data,300,400,".two");
-  drawGraph(data,400,500,".three");
+  drawGraph(data,300,300,".one");
+  drawGraph(data,400,400,".two");
+  drawGraph(data,500,500,".three");
 },
 function(err)
 {

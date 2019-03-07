@@ -43,7 +43,7 @@ var yScale = d3.scaleLinear()
                 .domain([0,100])
                 .range([0,height]);
   
-var colors = d3.scaleOrdinal(schemeSet3);
+var colors = d3.scaleOrdinal(d3.schemeSet3);
 
                
 //plot land

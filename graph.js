@@ -3,16 +3,16 @@ var datawhatever = d3.json("data.json");
 
 datawhatever.then(function(data)
 {
-  drawGraph(data,200,300);
-  drawGraph(data,300,400);
-  drawGraph(data,400,500);
+  drawGraph(data,200,300,".one");
+  drawGraph(data,300,400,".two");
+  drawGraph(data,400,500,".three");
 },
 function(err)
 {
   console.log(err)
 })
 
-var drawGraph = function(data,w,h)
+var drawGraph = function(data,w,h,c)
 {
   var screen = 
   {
@@ -20,7 +20,7 @@ var drawGraph = function(data,w,h)
     height:h
   };
   
-var svg = d3.select("svg")
+var svg = d3.select(c)
              .attr("width",screen.width)
              .attr("height",screen.height)
              

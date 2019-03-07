@@ -41,7 +41,7 @@ var xScale = d3.scaleLinear()
                 .range([0,width]);
 var yScale = d3.scaleLinear()
                 .domain([0,100])
-                .range([height,0]);
+                .range([0,height]);
   
 var colors = d3.scaleOrdinal(d3.interpolateInferno);
                
@@ -99,6 +99,6 @@ var xAxis = d3.axisBottom(xScale);
   
   svg.append("g").classed("yAxis",true)
      .call(yAxis)
-     .attr("transform", "translate("+margins.left-15 + "," + margins.top+")")
+     .attr("transform", "translate("+margins.left + "," + margins.top+")")
   
 }

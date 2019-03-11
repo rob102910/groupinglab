@@ -6,6 +6,7 @@ datawhatever.then(function(data)
   drawGraph(data,500,300,".one");
   drawGraph(data,600,400,".two");
   drawGraph(data,700,500,".three");
+  drawGraph(data,1000,800,".four");
 },
 function(err)
 {
